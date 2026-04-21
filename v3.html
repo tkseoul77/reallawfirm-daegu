@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>대구 개인회생·파산 | 리얼로펌 대구</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+/* PROJECT NAV */
+.pnav{position:fixed;top:0;left:0;right:0;z-index:9999;background:#07100a;padding:7px 28px;display:flex;align-items:center;justify-content:space-between;font-family:"Noto Sans KR",sans-serif;font-size:11px;border-bottom:1px solid rgba(125,212,148,.1)}
+.pnl{display:flex;align-items:center;gap:12px}
+.pnlbl{color:rgba(255,255,255,.3);letter-spacing:2px;text-transform:uppercase}
+.pnbadge{background:rgba(201,150,58,.12);color:#c9963a;padding:3px 10px;border-radius:20px;font-weight:700;font-size:10px;letter-spacing:1px;border:1px solid rgba(201,150,58,.2)}
+.pnlinks{display:flex;gap:18px}
+.pnlinks a{color:rgba(255,255,255,.3);text-decoration:none;transition:color .2s}
+.pnlinks a:hover{color:#7dd494}
+
+:root{--g:#2a9d7c;--gd:#1e7a5e;--gl:#e8f5f0;--gold:#c9963a;--dark:#1a2332;--dbg:#111827;--w:#fff;--bg:#fff;--bgl:#f8faf9;--gray:#6b7280;--grl:#f3f4f6;--bd:#e5e7eb;--tx:#1f2937}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:"Noto Sans KR",sans-serif;color:var(--tx);background:var(--bg);overflow-x:hidden;padding-top:34px}
+
+/* FLOATING */
+.fc{position:fixed;bottom:20px;right:16px;z-index:999;display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.fb{display:flex;align-items:center;gap:8px;padding:11px 18px;border-radius:50px;font-size:13px;font-weight:700;font-family:"Noto Sans KR",sans-serif;cursor:pointer;border:none;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,.22);transition:transform .2s;white-space:nowrap}
+.fb:hover{transform:translateY(-2px)}.fb.p{background:var(--g);color:#fff}.fb.s{background:var(--dark);color:#fff}
+
+/* HEADER */
+header{position:sticky;top:34px;z-index:900;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;border-bottom:1px solid var(--bd);box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.logo img{height:28px}
+.hph{color:var(--g);font-size:14px;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:6px}
+.hbt{background:var(--g);color:#fff;padding:9px 18px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;background:var(--dbg);display:flex;align-items:center;justify-content:center;overflow:hidden;padding-top:64px}
+.hvb{position:absolute;inset:0;overflow:hidden}
+.hvb video{width:100%;height:100%;object-fit:cover;opacity:.3}
+.hov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(17,24,39,.6),rgba(17,24,39,.82))}
+.hc{position:relative;z-index:2;text-align:center;padding:60px 24px;max-width:880px;width:100%}
+.dbadge{display:inline-flex;align-items:center;gap:8px;background:rgba(42,157,124,.2);border:1px solid rgba(42,157,124,.5);color:#5dd4b0;padding:8px 20px;border-radius:50px;font-size:12px;font-weight:700;letter-spacing:.1em;margin-bottom:24px}
+.bdot{width:7px;height:7px;background:#5dd4b0;border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.hsl{height:130px;overflow:hidden;margin-bottom:20px;position:relative}
+.hs{position:absolute;width:100%;opacity:0;transform:translateY(16px);transition:all .7s ease}
+.hs.active{opacity:1;transform:translateY(0)}
+.hs h1{font-family:"Noto Serif KR",serif;font-size:clamp(24px,3.8vw,44px);font-weight:900;color:#fff;line-height:1.38}
+.hs h1 .em{color:#5dd4b0}
+.hs p{font-size:14px;color:rgba(255,255,255,.6);margin-top:8px}
+.hlw{display:flex;justify-content:center;gap:24px;margin-bottom:24px;flex-wrap:wrap}
+.hlc{display:flex;flex-direction:column;align-items:center;gap:7px}
+.hlav{width:76px;height:76px;border-radius:50%;border:2px solid rgba(42,157,124,.7);overflow:hidden;background:#1e3a5f;display:flex;align-items:center;justify-content:center;font-size:28px}
+.hln{color:#fff;font-size:13px;font-weight:700;font-family:"Noto Serif KR",serif}
+.hls{color:rgba(255,255,255,.5);font-size:11px}
+.htb{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+.htbi{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.8);padding:7px 16px;border-radius:50px;font-size:12px;font-weight:600}
+.hbt2{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
+.bg{background:var(--g);color:#fff;padding:13px 26px;border-radius:50px;font-size:14px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:7px;transition:all .2s}
+.bg:hover{background:var(--gd);transform:translateY(-1px)}
+.bw{background:transparent;color:#fff;padding:13px 26px;border-radius:50px;font-size:14px;font-weight:700;text-decoration:none;border:2px solid rgba(255,255,255,.35);display:inline-flex;align-items:center;gap:7px}
+.bw:hover{border-color:#5dd4b0;color:#5dd4b0}
+.hst{display:flex;justify-content:center;gap:0;max-width:400px;margin:0 auto;border:1px solid rgba(255,255,255,.1);border-radius:12px;overflow:hidden;background:rgba(255,255,255,.05)}
+.hsi{flex:1;padding:14px 8px;text-align:center;border-right:1px solid rgba(255,255,255,.1)}
+.hsi:last-child{border-right:none}
+.hsn{font-family:"Noto Serif KR",serif;font-size:20px;font-weight:900;color:var(--gold);display:block}
+.hsl2{font-size:10px;color:rgba(255,255,255,.45);margin-top:2px}
+.dots{display:flex;gap:8px;justify-content:center;margin-top:20px}
+.dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.3);cursor:pointer;transition:all .3s}
+.dot.active{background:#5dd4b0;width:20px;border-radius:3px}
+
+/* SECTION */
+.sec{padding:80px 40px}.si{max-width:1060px;margin:0 auto}
+.stag{display:inline-flex;align-items:center;gap:6px;background:var(--gl);color:var(--gd);font-size:11px;font-weight:700;letter-spacing:.1em;padding:5px 14px;border-radius:50px;margin-bottom:14px;border:1px solid #b8ddd4}
+.stg{font-family:"Noto Serif KR",serif;font-size:clamp(22px,2.8vw,34px);font-weight:900;line-height:1.4;color:var(--dark);margin-bottom:10px}
+.stg .em{color:var(--g)}.stg .eg{color:var(--gold)}
+.ssb{font-size:14px;color:var(--gray);line-height:1.75}
+
+/* CONCERN */
+.ccg{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:40px}
+.cc{background:#fff;border-radius:16px;padding:24px;border:1px solid var(--bd);display:flex;gap:16px;align-items:flex-start;transition:all .3s;position:relative;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.cc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--g);transform:scaleY(0);transition:transform .3s;transform-origin:bottom}
+.cc:hover{border-color:var(--g);box-shadow:0 6px 24px rgba(42,157,124,.12);transform:translateY(-2px)}
+.cc:hover::before{transform:scaleY(1)}
+.cc img{width:56px;height:56px;flex-shrink:0}
+.cctb{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;margin-bottom:5px}
+.tr{background:#fee2e2;color:#dc2626}.tb{background:#dbeafe;color:#1d4ed8}.to{background:#ffedd5;color:#ea580c}.tg{background:#d1fae5;color:#059669}
+.cct{font-size:15px;font-weight:700;color:var(--dark);margin-bottom:5px;font-family:"Noto Serif KR",serif;line-height:1.4}
+.ccd{font-size:13px;color:var(--gray);line-height:1.6}
+.ccb{margin-top:28px;background:var(--g);border-radius:14px;padding:28px 36px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.ccbt{color:#fff;font-family:"Noto Serif KR",serif;font-size:17px;font-weight:700;line-height:1.5}
+.ccbt strong{color:#a8edda}
+
+/* PROMISE */
+.prom{background:var(--bgl);padding:32px 40px;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);text-align:center}
+.prom p{font-size:13px;color:var(--gray);margin-bottom:5px}
+.prom strong{font-family:"Noto Serif KR",serif;font-size:17px;font-weight:700;color:var(--dark)}
+.pbs{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:14px 0 10px}
+.pb{background:#fff;border:1px solid #c8e8df;border-radius:50px;padding:8px 16px;font-size:13px;font-weight:700;color:var(--gd)}
+.pck{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+.pk{display:flex;align-items:center;gap:5px;font-size:13px;color:var(--gray)}
+.pk::before{content:"✓";color:var(--g);font-weight:700}
+
+/* WHY */
+.wg{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px;margin-bottom:36px}
+.wc{background:var(--bgl);border:1px solid var(--bd);border-radius:14px;padding:24px;transition:all .3s}
+.wc:hover{border-color:var(--g);box-shadow:0 6px 20px rgba(42,157,124,.1)}
+.wc.lg{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.wb{display:inline-block;background:var(--g);color:#fff;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+.wt{font-family:"Noto Serif KR",serif;font-size:16px;font-weight:900;color:var(--dark);margin-bottom:7px;line-height:1.4}
+.wd{font-size:13px;color:var(--gray);line-height:1.65}
+.wd .ar{color:var(--g);font-weight:700}
+.wil{width:100%;border-radius:12px;height:190px;object-fit:cover;background:#1a3a2a;display:flex;align-items:center;justify-content:center;font-size:48px}
+.wctab{border:1px solid rgba(42,157,124,.2);border-radius:14px;padding:28px;text-align:center;background:var(--gl);margin-top:8px}
+
+/* 환불 배너 */
+.rfb{background:var(--dbg);padding:52px 40px;text-align:center;position:relative;overflow:hidden}
+.rfb::before{content:"";position:absolute;inset:0;opacity:.15}
+.rfb-in{position:relative;z-index:1}
+.rfb-badge{display:inline-flex;align-items:center;gap:20px;background:rgba(201,150,58,.1);border:2px solid var(--gold);border-radius:16px;padding:24px 36px;margin-bottom:16px}
+.rfb-medal{width:72px;height:72px;background:radial-gradient(circle at 30% 30%,#e8c76a,#c9963a,#a07830);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;font-weight:900;color:#fff;flex-shrink:0;box-shadow:0 4px 20px rgba(201,150,58,.4)}
+.rfb-medal .big{font-size:16px;font-family:"Noto Serif KR",serif}
+.rfb-medal .sm{font-size:9px}
+.rfb-text h3{font-family:"Noto Serif KR",serif;font-size:clamp(18px,3vw,28px);font-weight:900;color:#fff;margin-bottom:4px;text-align:left}
+.rfb-text h3 em{color:var(--gold);font-style:normal}
+.rfb-text p{font-size:12px;color:rgba(255,255,255,.45);text-align:left}
+.rfb-pts{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:20px}
+.rfb-pt{text-align:center;min-width:140px}
+.rfb-pt .icon{font-size:22px;margin-bottom:8px}
+.rfb-pt .title{font-size:13px;font-weight:700;color:rgba(255,255,255,.85);margin-bottom:4px}
+.rfb-pt .desc{font-size:12px;color:rgba(255,255,255,.45);line-height:1.6}
+
+/* LAWYER */
+.dlg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:22px}
+.dlc{background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--bd);box-shadow:0 2px 10px rgba(0,0,0,.05);transition:all .3s}
+.dlc:hover{border-color:var(--g);box-shadow:0 8px 28px rgba(42,157,124,.12);transform:translateY(-2px)}
+.dlh{background:linear-gradient(135deg,var(--dark) 0%,#1e3a5f 100%);padding:22px 18px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px}
+.dlav{width:90px;height:90px;border-radius:50%;overflow:hidden;border:3px solid var(--g);flex-shrink:0;background:#1e3a5f;display:flex;align-items:center;justify-content:center;font-size:36px}
+.dln{font-family:"Noto Serif KR",serif;font-size:17px;font-weight:900;color:#fff}
+.dlp{font-size:11px;color:#5dd4b0;font-weight:600}
+.dltg{display:flex;gap:4px;flex-wrap:wrap;justify-content:center}
+.dlt{background:rgba(42,157,124,.2);color:#a8edda;font-size:10px;padding:2px 7px;border-radius:20px;font-weight:600;border:1px solid rgba(42,157,124,.3)}
+.dlb{padding:18px}
+.dlcr{list-style:none;margin-bottom:12px}
+.dlcr li{font-size:12px;color:var(--tx);padding:6px 0;border-bottom:1px solid var(--grl);display:flex;gap:7px;align-items:flex-start;line-height:1.5}
+.dlcr li:last-child{border-bottom:none}
+.dlcr li::before{content:"";width:4px;height:4px;background:var(--g);border-radius:50%;flex-shrink:0;margin-top:6px}
+.dlq{background:var(--gl);border-radius:8px;padding:11px 13px;font-size:12px;color:var(--gd);line-height:1.6;font-style:italic;border-left:3px solid var(--g)}
+
+/* 대구 특화 - VS */
+.dgl{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;margin-top:48px}
+.dgv{background:linear-gradient(135deg,var(--dark),#1e3a5f);border-radius:18px;padding:40px 32px;position:relative;overflow:hidden}
+.dgv::before{content:"대구";position:absolute;top:-16px;right:-8px;font-family:"Noto Serif KR",serif;font-size:110px;font-weight:900;color:rgba(42,157,124,.06);line-height:1;pointer-events:none}
+.dglb{display:inline-flex;align-items:center;gap:7px;background:var(--g);color:#fff;padding:7px 14px;border-radius:7px;font-size:12px;font-weight:700;margin-bottom:18px}
+.dgvt{font-family:"Noto Serif KR",serif;font-size:22px;font-weight:900;color:#fff;line-height:1.4;margin-bottom:22px}
+.dgst{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dgs{background:rgba(255,255,255,.06);border:1px solid rgba(42,157,124,.2);border-radius:10px;padding:14px;text-align:center}
+.dgsn{font-family:"Noto Serif KR",serif;font-size:20px;color:var(--gold);font-weight:900;display:block}
+.dgsl{font-size:11px;color:rgba(255,255,255,.5)}
+.dgpt{font-family:"Noto Serif KR",serif;font-size:22px;font-weight:900;color:var(--dark);margin-bottom:22px;line-height:1.4}
+.dgpl{list-style:none;display:flex;flex-direction:column;gap:14px}
+.dgpi{display:flex;gap:12px;align-items:flex-start;padding:16px;background:var(--bgl);border-radius:10px;border:1px solid transparent;transition:all .25s}
+.dgpi:hover{border-color:var(--g);background:#f0faf6}
+.dgpic{width:36px;height:36px;background:var(--dark);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.dgpit{font-weight:700;font-size:13px;color:var(--dark);margin-bottom:3px}
+.dgpid{font-size:12px;color:var(--gray);line-height:1.55}
+
+/* VS 비교 */
+.vs-wrap{margin-top:40px;display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:stretch}
+.vs-bad{background:rgba(255,255,255,.02);border:1px solid rgba(200,50,50,.2);border-radius:14px;padding:24px}
+.vs-good{background:rgba(42,157,124,.08);border:1px solid rgba(42,157,124,.3);border-radius:14px;padding:24px}
+.vs-lbl{font-size:11px;font-weight:700;letter-spacing:1px;margin-bottom:16px;display:flex;align-items:center;gap:6px}
+.vs-bad .vs-lbl{color:rgba(255,255,255,.4)}
+.vs-good .vs-lbl{color:#5dd4b0}
+.vs-item{display:flex;align-items:flex-start;gap:9px;margin-bottom:12px;font-size:13px;line-height:1.55}
+.vs-bad .vs-item{color:rgba(255,255,255,.5)}
+.vs-good .vs-item{color:rgba(255,255,255,.9)}
+.vs-mid{display:flex;align-items:center;justify-content:center}
+.vs-circle{width:44px;height:44px;background:var(--gold);color:var(--dark);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px}
+.vs-courts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.vs-court{background:rgba(255,255,255,.04);border:1px solid rgba(201,150,58,.2);border-radius:14px;padding:20px;text-align:center}
+.vs-court .icon{font-size:28px;margin-bottom:10px}
+.vs-court h4{color:var(--gold);font-size:13px;font-weight:700;margin-bottom:7px}
+.vs-court p{color:rgba(255,255,255,.55);font-size:12px;line-height:1.65}
+
+/* DIAGNOSIS */
+.diag{background:var(--dbg);padding:80px 40px}
+.dw{max-width:640px;margin:40px auto 0;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden}
+.dsd{display:grid;grid-template-columns:170px 1fr}
+.dsl{background:rgba(42,157,124,.1);padding:26px 18px;border-right:1px solid rgba(42,157,124,.15)}
+.dst{display:inline-block;background:var(--g);color:#fff;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px;margin-bottom:14px}
+.dsti{font-family:"Noto Serif KR",serif;font-size:15px;font-weight:900;color:#fff;margin-bottom:4px;line-height:1.4}
+.dsti .em{color:#5dd4b0}
+.dss{list-style:none;margin-top:16px}
+.dssi{display:flex;align-items:center;gap:8px;padding:7px 0;font-size:12px;color:rgba(255,255,255,.4)}
+.dssi.active{color:#5dd4b0;font-weight:700}
+.dssn{width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0}
+.dssi.active .dssn{background:var(--g);color:#fff}
+.dsr{padding:26px}
+.dqh{background:var(--g);color:#fff;font-size:11px;font-weight:700;padding:5px 13px;border-radius:8px;margin-bottom:14px;display:inline-block}
+.dqt{font-family:"Noto Serif KR",serif;font-size:16px;font-weight:700;color:#fff;margin-bottom:5px;line-height:1.45}
+.dqs{font-size:12px;color:rgba(255,255,255,.4);margin-bottom:18px}
+.dos{display:flex;flex-direction:column;gap:8px}
+.do{padding:12px 15px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:transparent;font-size:13px;font-weight:600;font-family:"Noto Sans KR",sans-serif;cursor:pointer;transition:all .2s;text-align:left;display:flex;align-items:center;justify-content:space-between;color:#fff}
+.do:hover{border-color:var(--g);background:rgba(42,157,124,.08);color:#5dd4b0}
+.dstep{display:none}.dstep.active{display:block}
+.dres{display:none;text-align:center}.dres.show{display:block}
+.dri{font-size:44px;margin-bottom:10px}
+.drt{font-family:"Noto Serif KR",serif;font-size:17px;font-weight:900;color:#fff;margin-bottom:7px}
+.drd{font-size:13px;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:14px}
+.drb{background:rgba(42,157,124,.1);border:1px solid rgba(42,157,124,.3);border-radius:10px;padding:12px;color:#5dd4b0;font-size:13px;font-weight:700;margin-bottom:14px}
+
+/* CASES */
+.csg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.csc{background:#fff;border-radius:14px;overflow:hidden;border:1px solid var(--bd);transition:all .3s;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.csc:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.08);border-color:var(--g)}
+.cst{padding:12px 16px 0;display:flex;gap:6px;flex-wrap:wrap}
+.ct{font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px}
+.ctg{background:var(--gl);color:var(--gd)}.ctgr{background:var(--grl);color:var(--gray)}
+.csb{padding:12px 16px 16px}
+.cstt{font-size:13px;font-weight:700;color:var(--dark);margin-bottom:10px;font-family:"Noto Serif KR",serif;line-height:1.45}
+.csn{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:10px}
+.cnr{background:var(--bgl);border-radius:7px;padding:9px}
+.cnl{font-size:10px;color:var(--gray);margin-bottom:3px}
+.cnrw{display:flex;align-items:center;gap:4px}
+.cnf{font-size:11px;color:var(--gray);text-decoration:line-through}
+.cna{color:var(--g);font-size:11px}
+.cnt{font-size:14px;font-weight:900;color:var(--dark)}
+.csr{display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-top:1px solid var(--grl)}
+.csrl{font-size:11px;color:var(--gray)}
+.csrv{font-family:"Noto Serif KR",serif;font-size:22px;font-weight:900}
+.csrv.r1{color:#1e7a5e}.csrv.r2{color:#1e5a7a}.csrv.r3{color:#7a1e1e}
+
+/* WORRY */
+.worg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.worc{background:#fff;border-radius:14px;padding:22px 18px;border:1px solid var(--bd)}
+.worw{font-size:14px;font-weight:700;color:var(--gray);margin-bottom:5px;padding-left:24px;position:relative}
+.worw::before{content:"😰";position:absolute;left:0;top:0}
+.worwd{font-size:12px;color:var(--gray);margin-bottom:14px;padding-left:24px;line-height:1.55}
+.wordiv{height:1px;background:var(--bd);margin-bottom:14px}
+.wors{font-size:13px;font-weight:700;color:var(--dark);margin-bottom:5px;display:flex;align-items:center;gap:6px}
+.wors::before{content:"✅"}
+.worsd{font-size:12px;color:var(--gray);line-height:1.6}
+.worg2{margin-top:28px;background:var(--dark);border-radius:14px;padding:28px 32px;display:flex;gap:24px;align-items:center}
+.wori{font-size:40px;flex-shrink:0}
+.wort{font-family:"Noto Serif KR",serif;font-size:17px;font-weight:900;color:#fff;margin-bottom:6px}
+.word{font-size:13px;color:rgba(255,255,255,.6);line-height:1.65}
+.word strong{color:var(--gold)}
+
+/* LOCATION */
+.loc{background:var(--dbg);padding:80px 40px}
+.ltag{display:inline-flex;align-items:center;gap:6px;background:rgba(42,157,124,.2);border:1px solid rgba(42,157,124,.4);color:#5dd4b0;font-size:11px;font-weight:700;padding:5px 14px;border-radius:50px;margin-bottom:14px}
+.ltt{font-family:"Noto Serif KR",serif;font-size:clamp(22px,2.8vw,32px);font-weight:900;color:#fff;line-height:1.4;margin-bottom:6px}
+.lts{font-size:14px;color:rgba(255,255,255,.5)}
+.ld{background:rgba(255,255,255,.04);border:2px solid rgba(42,157,124,.3);border-radius:20px;overflow:hidden;margin-top:36px}
+.ldh{background:rgba(42,157,124,.12);padding:16px 26px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(42,157,124,.2)}
+.ldhb{background:var(--g);color:#fff;padding:4px 13px;border-radius:50px;font-size:11px;font-weight:700}
+.ldhn{font-family:"Noto Serif KR",serif;font-size:17px;font-weight:700;color:#fff}
+.ldhp{background:var(--g);color:#fff;padding:9px 18px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none}
+.ldb{display:grid;grid-template-columns:1fr 1fr}
+.ldph{overflow:hidden;min-height:220px;background:linear-gradient(135deg,#1a3a2a,#0f2016);display:flex;align-items:center;justify-content:center;font-size:60px}
+.ldi{padding:26px}
+.ldil{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:18px}
+.ldii{display:flex;gap:11px;align-items:flex-start}
+.ldic{width:34px;height:34px;background:rgba(42,157,124,.2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+.ldil2{font-size:10px;color:#5dd4b0;font-weight:700;margin-bottom:2px}
+.ldiv{font-size:13px;font-weight:600;color:#fff}
+.ldis{font-size:11px;color:rgba(255,255,255,.45)}
+.ldbt{padding:14px 26px;border-top:1px solid rgba(255,255,255,.07);display:flex;gap:10px}
+.lbc{flex:1;background:var(--g);color:#fff;padding:11px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;text-align:center;font-family:"Noto Sans KR",sans-serif}
+.lbm{flex:1;background:rgba(255,255,255,.07);color:#fff;padding:11px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;text-align:center;font-family:"Noto Sans KR",sans-serif;border:1px solid rgba(255,255,255,.12)}
+
+/* FINAL */
+.fin{background:var(--bg);padding:96px 40px;text-align:center}
+.fint{font-size:11px;color:var(--g);font-weight:700;letter-spacing:.1em;margin-bottom:12px}
+.finth{font-family:"Noto Serif KR",serif;font-size:clamp(24px,3.5vw,40px);font-weight:900;color:var(--dark);line-height:1.4;margin-bottom:12px}
+.finth .em{color:var(--g)}
+.fins{font-size:15px;color:var(--gray);margin-bottom:14px;line-height:1.7}
+.fins strong{color:var(--dark)}
+.finn{display:flex;justify-content:center;gap:28px;margin:0 auto 32px;padding:22px;background:var(--bgl);border-radius:14px;max-width:520px;border:1px solid var(--bd)}
+.fn{text-align:center}
+.fnn{font-family:"Noto Serif KR",serif;font-size:26px;font-weight:900;color:var(--gold);display:block}
+.fnl{font-size:11px;color:var(--gray)}
+.finb{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
+.finnote{font-size:12px;color:var(--gray);display:flex;align-items:center;gap:5px;justify-content:center}
+
+/* CONTACT */
+.cont{padding:80px 40px;background:var(--bgl)}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:1060px;margin:40px auto 0}
+.ci h3{font-family:"Noto Serif KR",serif;font-size:24px;font-weight:900;margin-bottom:8px}
+.ci h3 em{color:var(--g);font-style:normal}
+.ci .sub{color:var(--gray);font-size:14px;line-height:1.7;margin-bottom:28px}
+.cm{display:flex;align-items:center;gap:16px;padding:18px 20px;background:#fff;border-radius:14px;border:1px solid var(--bd);margin-bottom:12px;text-decoration:none;transition:all .2s;color:var(--tx)}
+.cm:hover{border-color:var(--g);background:#f0faf6;transform:translateX(4px)}
+.cm .icon{font-size:24px;flex-shrink:0}
+.cm .detail h4{font-size:13px;font-weight:700;margin-bottom:2px}
+.cm .detail p{font-size:12px;color:#888}
+.cm .num{font-size:18px;font-weight:900;color:var(--g);margin-left:auto;font-family:"Noto Serif KR",serif}
+.oi{background:var(--gl);border-radius:14px;padding:18px 20px;margin-top:12px}
+.oi h4{font-size:13px;font-weight:700;margin-bottom:8px}
+.oi p{font-size:12px;color:#666;line-height:1.8}
+.cf2{background:#fff;border-radius:20px;padding:32px;border:1px solid var(--bd)}
+.cf2 h3{font-size:20px;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:8px}
+.cff{margin-bottom:14px}
+.cff label{display:block;font-size:12px;font-weight:700;color:var(--gray);margin-bottom:6px;letter-spacing:.3px}
+.cff input,.cff textarea,.cff select{width:100%;padding:12px 14px;border:1px solid var(--bd);border-radius:8px;font-size:14px;font-family:"Noto Sans KR",sans-serif;outline:none;transition:border-color .2s;color:var(--tx)}
+.cff input:focus,.cff textarea:focus,.cff select:focus{border-color:var(--g)}
+.cff textarea{min-height:80px;resize:vertical}
+.csub{width:100%;padding:16px;background:var(--g);color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:700;font-family:"Noto Sans KR",sans-serif;cursor:pointer;margin-top:8px;transition:all .2s}
+.csub:hover{background:var(--gd);transform:translateY(-1px)}
+
+/* FOOTER */
+footer{background:var(--dbg);padding:40px 40px 100px;color:rgba(255,255,255,.45);font-size:12px;line-height:1.8}
+.ftin{max-width:1060px;margin:0 auto}
+.ftl{font-family:"Noto Serif KR",serif;color:#fff;font-size:18px;font-weight:700;margin-bottom:16px}
+.ftl span{color:var(--gold)}
+.ftd{font-size:12px;color:rgba(255,255,255,.35);line-height:1.7;margin-bottom:6px}
+.ftc{font-size:11px;color:rgba(255,255,255,.2)}
+
+.rv{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
+.rv.vis{opacity:1;transform:none}
+
+@media(max-width:768px){
+  header{padding:0 16px}
+  .ccg{grid-template-columns:1fr}.ccb{flex-direction:column;text-align:center}
+  .dlg{grid-template-columns:1fr}.csg{grid-template-columns:1fr}
+  .worg{grid-template-columns:1fr}.worg2{flex-direction:column;text-align:center}
+  .ldb{grid-template-columns:1fr}.sec{padding:60px 20px}
+  .finn{gap:16px}.cg{grid-template-columns:1fr}
+  .dgl{grid-template-columns:1fr}.vs-wrap{grid-template-columns:1fr}
+  .vs-mid{display:none}.vs-courts{grid-template-columns:1fr}
+  .wg{grid-template-columns:1fr}.wc.lg{grid-column:span 1;grid-template-columns:1fr}
+  .diag,.loc,.rfb{padding:60px 20px}
+  .dsd{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- PROJECT NAV -->
+<div class="pnav">
+  <div class="pnl">
+    <span class="pnlbl">Project Archive</span>
+    <span class="pnbadge">Concept C · Evidence & Data-Driven</span>
+  </div>
+  <div class="pnlinks">
+    <a href="hub.html">← Hub</a>
+    <a href="https://tkseoul77.github.io/reallawfirm-daegu/" target="_blank">Concept A (Live)</a>
+    <a href="v2.html">Concept B</a>
+  </div>
+</div>
+
+<!-- FLOATING -->
+<div class="fc">
+  <a href="tel:053-000-0000" class="fb s">📞 대구 사무소 연결</a>
+  <a href="#fin" class="fb p">✉️ 무료 상담 신청</a>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div style="font-family:'Noto Serif KR',serif;font-size:16px;font-weight:700;color:#1a2332">법무법인 <span style="color:#2a9d7c">리얼로펌</span> 대구</div>
+  <div style="display:flex;align-items:center;gap:14px">
+    <a href="tel:053-000-0000" class="hph">📞 대구 053-000-0000</a>
+    <a href="#fin" class="hbt">대구 상담 바로 연결</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hvb"><video autoplay muted loop playsinline><source src="https://smileagain4u.com/video/hero-1.webm" type="video/webm"></video></div>
+  <div class="hov"></div>
+  <div class="hc">
+    <div class="dbadge"><span class="bdot"></span>대구 개인회생 · 파산 전담센터</div>
+    <div class="hsl" id="hsl">
+      <div class="hs active"><h1>대구에서 개인회생·파산,<br><span class="em">어디에 맡겨야 할지</span><br>고민이신가요?</h1><p>대구 토박이 변호사가 직접 상담 진행합니다</p></div>
+      <div class="hs"><h1>더 이상 혼자<br><span class="em">버티지 않아도 됩니다</span></h1><p>수천 건의 회생을 성공시킨 전문 변호사가 지금 상황에 맞는 해결책을 찾아드립니다</p></div>
+      <div class="hs"><h1>독촉전화,<br><span class="em">오늘로 끝낼 수 있습니다</span></h1><p>지금, 리얼과 함께 시작하면 가장 빠르게 해결됩니다</p></div>
+    </div>
+    <div class="hlw">
+      <div class="hlc"><div class="hlav">⚖️</div><div class="hln">이창희 변호사</div><div class="hls">도산법 전문</div></div>
+      <div class="hlc"><div class="hlav">🏛️</div><div class="hln">이정수 변호사</div><div class="hls">경북대 법학</div></div>
+      <div class="hlc"><div class="hlav">📋</div><div class="hln">이지은 변호사</div><div class="hls">세무사·변리사</div></div>
+    </div>
+    <div class="htb">
+      <span class="htbi">🤝 대구 토박이 변호사</span>
+      <span class="htbi">👤 직접 상담 진행</span>
+      <span class="htbi">🛡️ 기각시 100% 환불 보장</span>
+    </div>
+    <div class="hbt2">
+      <a href="tel:053-000-0000" class="bg">📞 대구 상담 바로 연결하기</a>
+      <a href="#diag" class="bw">⚡ 1분 무료 진단</a>
+    </div>
+    <div class="hst">
+      <div class="hsi"><span class="hsn">3,600건+</span><span class="hsl2">누적 인가</span></div>
+      <div class="hsi"><span class="hsn">0%</span><span class="hsl2">기각률</span></div>
+      <div class="hsi"><span class="hsn">100%</span><span class="hsl2">기각시 환불</span></div>
+    </div>
+    <div class="dots"><div class="dot active" onclick="gS(0)"></div><div class="dot" onclick="gS(1)"></div><div class="dot" onclick="gS(2)"></div></div>
+  </div>
+</section>
+
+<!-- 공감 섹션 -->
+<section class="sec" style="background:var(--bg)">
+  <div class="si">
+    <div class="rv" style="text-align:center">
+      <span class="stag">💬 공감</span>
+      <h2 class="stg" style="text-align:center">지금, 혼자 버티고 계신건<br>아닌가요?</h2>
+      <p class="ssb" style="text-align:center">대구에서 빚 때문에 힘드신 분들, 정말 많습니다. 이런 걱정, 혼자 하지 마세요.</p>
+    </div>
+    <div class="ccg rv">
+      <div class="cc"><div style="font-size:52px;flex-shrink:0">😰</div><div><span class="cctb tr"># 추심 독촉</span><div class="cct">벨이 울릴 때마다<br>심장이 덜컥</div><div class="ccd">카드값·대출 독촉전화가 하루에도 수십 통... 법적 보호를 받으면 즉시 멈출 수 있습니다.</div></div></div>
+      <div class="cc"><div style="font-size:52px;flex-shrink:0">🫣</div><div><span class="cctb tb"># 신상 정보 노출</span><div class="cct">회사나 가족에게<br>알려질까 두려워</div><div class="ccd">대구는 좁은 동네, 아는 사람도 많죠. 완벽한 비밀 보장, 절대 확실히 지킵니다.</div></div></div>
+      <div class="cc"><div style="font-size:52px;flex-shrink:0">😤</div><div><span class="cctb to"># 돌려막기</span><div class="cct">아무리 갚아도<br>줄지 않는 빚</div><div class="ccd">월급은 들어오지만 이자조차 감당이 안 되는... 개인회생으로 구조 자체를 바꿀 수 있습니다.</div></div></div>
+      <div class="cc"><div style="font-size:52px;flex-shrink:0">😟</div><div><span class="cctb tg"># 기각 걱정</span><div class="cct">신청 후 기각될까 봐<br>망설이고 고민만</div><div class="ccd">그 결과 상황만 더 악화... 가능한 사건만 선별 수임하기 때문에 자신 있게 책임집니다.</div></div></div>
+    </div>
+    <div class="ccb rv">
+      <p class="ccbt">이 모든 문제, 혼자 해결하려 하지 마세요.<br><strong>리얼로펌 대구가 함께 해결합니다.</strong></p>
+      <a href="#fin" class="bw" style="border-color:rgba(255,255,255,.45)">대구 사무소 상담 바로 연결 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 약속 배너 -->
+<div class="prom rv">
+  <p>더 이상 혼자 고민하지 마세요</p>
+  <strong>지금, 리얼과 시작하면 가장 빠르게 해결됩니다</strong>
+  <div class="pbs"><div class="pb">⚡ 신속</div><div class="pb">✅ 완벽</div><div class="pb">🔒 안전</div><div class="pb">😊 편리</div><div class="pb">🎯 전문성</div></div>
+  <div class="pck"><span class="pk">상담 무료</span><span class="pk">비밀 100% 보장</span><span class="pk">가족·직장 통보 없음</span></div>
+</div>
+
+<!-- 대구 특화 & VS 비교 -->
+<section class="sec" style="background:var(--dbg)">
+  <div class="si">
+    <div class="rv" style="text-align:center">
+      <span class="stag" style="border-color:rgba(42,157,124,.3)">📍 대구 지역 특화</span>
+      <h2 class="stg" style="text-align:center;color:#fff">타 지역 로펌과 리얼로펌의<br><span class="em">결정적 차이</span></h2>
+      <p class="ssb" style="text-align:center;color:rgba(255,255,255,.5)">대구·경북 사건은 대구 법원 경험이 필수입니다.<br>서울 로펌은 지역의 세부 업무 처리 방식을 모릅니다.</p>
+    </div>
+    <div class="vs-wrap rv">
+      <div class="vs-bad">
+        <div class="vs-lbl">⛔ 타 지역 · 서울 업체</div>
+        <div class="vs-item"><span>✗</span><span>온라인·서류 위주, 대리인·외주 처리</span></div>
+        <div class="vs-item"><span>✗</span><span>대구회생법원 조정위원 성향 파악 불가</span></div>
+        <div class="vs-item"><span>✗</span><span>긴급 서류 당일 제출 불가</span></div>
+        <div class="vs-item"><span>✗</span><span>지역 특성 이해 부족으로 기각 사례 발생</span></div>
+        <div class="vs-item"><span>✗</span><span>초기 문의 시 직원 상담, 변호사 미참여</span></div>
+        <div class="vs-item"><span>✗</span><span>대구 법원 방문 시 추가 출장비 발생</span></div>
+      </div>
+      <div class="vs-mid"><div class="vs-circle">VS</div></div>
+      <div class="vs-good">
+        <div class="vs-lbl">✅ 법무법인 리얼로펌 대구사무소</div>
+        <div class="vs-item"><span>✓</span><span>대구 지역 10년+ 경력 변호사가 직접 처리</span></div>
+        <div class="vs-item"><span>✓</span><span>대구회생법원 조정 시간·성향 완벽 파악</span></div>
+        <div class="vs-item"><span>✓</span><span>대구지방법원 인근 위치, 당일 서류 처출 가능</span></div>
+        <div class="vs-item"><span>✓</span><span>대구 지역 다수 인가 사례·낮은 기각률</span></div>
+        <div class="vs-item"><span>✓</span><span>상담부터 변호사 직접 참여·1:1 직접 담당</span></div>
+        <div class="vs-item"><span>✓</span><span>투명한 견적, 합리적 수임료, 절차 지연 최소화</span></div>
+      </div>
+    </div>
+    <div class="vs-courts rv">
+      <div class="vs-court"><div class="icon">🏛️</div><h4>대구지방법원</h4><p>대구 법원과의 지리적 근접성을 바탕으로 긴급 서류도 당일 접수 처리 가능</p></div>
+      <div class="vs-court"><div class="icon">⚖️</div><h4>대구회생법원 (신설)</h4><p>2019년 신설 이후 축적된 인가 사례·조정위원 성향 완벽 파악</p></div>
+      <div class="vs-court"><div class="icon">🤝</div><h4>대구·경북 지역 밀착</h4><p>대구경찰청·달서구청·수성구청 법률상담 위원 역임, 지역 법조 생태계 정통</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 환불 보장 -->
+<div class="rfb">
+  <div class="rfb-in">
+    <div class="rfb-badge rv">
+      <div class="rfb-medal"><span class="big">100%</span><span class="sm">환불보장</span></div>
+      <div class="rfb-text">
+        <h3>기각 시 수임료 <em>100% 환불</em> 보장</h3>
+        <p>환불로 책임을 증명합니다 · 환불 조건: 당사 귀책사유 기각 발생 시에 한함 · 상세 조건은 상담 시 안내드립니다</p>
+      </div>
+    </div>
+    <div class="rfb-pts rv">
+      <div class="rfb-pt"><div class="icon">⚡</div><div class="title">신속한 처리</div><div class="desc">대구 법원 인근 위치로 서류 접수부터 기일 대응까지 최단 시간에 진행합니다</div></div>
+      <div class="rfb-pt"><div class="icon">🔒</div><div class="title">비밀 100% 보장</div><div class="desc">상담 내용은 절대 외부에 공개되지 않습니다. 가족·직장 통보 없이 안전하게 진행됩니다</div></div>
+      <div class="rfb-pt"><div class="icon">👤</div><div class="title">변호사 직접 담당</div><div class="desc">직원이 아닌 변호사가 직접 상담하고, 서류 작성부터 인가까지 1:1로 끝까지 책임집니다</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 변호사 -->
+<section class="sec" style="background:var(--bgl)">
+  <div class="si">
+    <div class="rv" style="text-align:center">
+      <span class="stag">👤 담당 변호사</span>
+      <h2 class="stg" style="text-align:center">변호사가 직접<br><span class="em">처음부터 끝까지</span></h2>
+      <p class="ssb" style="text-align:center;max-width:500px;margin:0 auto">이름만 내건 사무소가 아닙니다. 실제로 책임지는 변호사를 만나보세요.</p>
+    </div>
+    <div class="dlg rv">
+      <div class="dlc">
+        <div class="dlh"><div class="dlav">⚖️</div><div class="dln">이창희 변호사</div><div class="dlp">리얼로펌 대표변호사</div><div class="dltg"><span class="dlt">도산 전문</span><span class="dlt">파산관재인</span></div></div>
+        <div class="dlb"><ul class="dlcr"><li>대한변호사협회 등록 도산 전문변호사</li><li>창원지방법원 파산관재인 (법원 공식 선임)</li><li>경남지방변호사회 국제거래연구회 총무이사</li><li>KNN 더로이어 회생파산 부문 변호사</li><li>기업회생경영사 교육 강사</li></ul><div class="dlq">"도산 전문가는 시장에 널렸습니다. 그러나 법원 공식 파산관재인으로서 실제 인가 결정을 이끈 경험, 그것이 리얼의 차이입니다."</div></div>
+      </div>
+      <div class="dlc">
+        <div class="dlh"><div class="dlav">🏛️</div><div class="dln">이정수 변호사</div><div class="dlp">대구사무소 파트너변호사</div><div class="dltg"><span class="dlt">경북대 법학</span><span class="dlt">대구 토박이</span></div></div>
+        <div class="dlb"><ul class="dlcr"><li>경북대학교 법학과 졸업 (대구 협성고 출신)</li><li>대구회생법원 개인회생 전담 처리</li><li>대구 경북 지역 도산 전문 변호사</li><li>달서경찰서·수성구청 법률상담위원</li><li>대구지방법원 구속사건 국선변호인</li></ul><div class="dlq">"10년간 대구 법조계에서 쌓아온 것은 단순한 경력이 아닙니다. 지역 법원의 결이 무엇인지, 저는 체득으로 압니다."</div></div>
+      </div>
+      <div class="dlc">
+        <div class="dlh"><div class="dlav">📋</div><div class="dln">이지은 변호사</div><div class="dlp">대구사무소 변호사 · 영남대 겸임교수</div><div class="dltg"><span class="dlt">경명여고 출신</span><span class="dlt">세무사·변리사</span></div></div>
+        <div class="dlb"><ul class="dlcr"><li>영남대학교 법학전문대학원 겸임교수</li><li>세무사·변리사 자격 보유 (복합 사건 원스톱)</li><li>대구광역시 동구청 의정비심의위원회 위원</li><li>대구경찰청 수사심의위원회 위원</li><li>대구지방국세청 정보공개심의위원회 위원</li></ul><div class="dlq">"대구 가정법원의 조정 시간이 타 지역보다 길고 까다롭습니다. 그 특성을 아는 것만으로도 결과가 달라집니다."</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 성공 사례 -->
+<section class="sec" id="cases">
+  <div class="si">
+    <div class="rv" style="text-align:center">
+      <span class="stag">📋 실제 성공 사례</span>
+      <h2 class="stg" style="text-align:center">과정과 결과로<br><span class="eg">증명합니다</span></h2>
+      <p class="ssb" style="text-align:center">대구회생법원 인가 사례, 탕감률로 직접 확인하세요.</p>
+    </div>
+    <div class="csg rv">
+      <div class="csc"><div class="cst"><span class="ct ctg">40대 남성</span><span class="ct ctg">자영업자</span><span class="ct ctgr">대구 달서구</span></div><div class="csb"><div class="cstt">코로나로 폐업한 자영업자의<br>개인회생 인가 사례</div><div class="csn"><div class="cnr"><div class="cnl">채무액</div><div class="cnrw"><span class="cnf">120,000,000원</span><span class="cna">↓</span><span class="cnt">18,000,000원</span></div></div><div class="cnr"><div class="cnl">월 변제금</div><div class="cnrw"><span class="cnf">2,500,000원</span><span class="cna">↓</span><span class="cnt">500,000원</span></div></div></div><div class="csr"><span class="csrl">최종 탕감률</span><span class="csrv r1">↘ 85%</span></div></div></div>
+      <div class="csc"><div class="cst"><span class="ct ctg">30대 여성</span><span class="ct ctg">직장인</span><span class="ct ctgr">대구 수성구</span></div><div class="csb"><div class="cstt">사행성 채무로 기각 우려됐던<br>직장인 회생 인가 사례</div><div class="csn"><div class="cnr"><div class="cnl">채무액</div><div class="cnrw"><span class="cnf">80,000,000원</span><span class="cna">↓</span><span class="cnt">9,600,000원</span></div></div><div class="cnr"><div class="cnl">월 변제금</div><div class="cnrw"><span class="cnf">1,500,000원</span><span class="cna">↓</span><span class="cnt">280,000원</span></div></div></div><div class="csr"><span class="csrl">최종 탕감률</span><span class="csrv r2">↘ 88%</span></div></div></div>
+      <div class="csc"><div class="cst"><span class="ct ctg">50대 남성</span><span class="ct ctg">일용직</span><span class="ct ctgr">대구 북구</span></div><div class="csb"><div class="cstt">전세사기 피해 이후<br>개인파산 면책 사례</div><div class="csn"><div class="cnr"><div class="cnl">채무액</div><div class="cnrw"><span class="cnf">150,000,000원</span><span class="cna">↓</span><span class="cnt">12,000,000원</span></div></div><div class="cnr"><div class="cnl">월 변제금</div><div class="cnrw"><span class="cnf">3,000,000원</span><span class="cna">↓</span><span class="cnt">240,000원</span></div></div></div><div class="csr"><span class="csrl">최종 탕감률</span><span class="csrv r3">↘ 92%</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 걱정 해결 -->
+<section class="sec" style="background:var(--bgl)">
+  <div class="si">
+    <div class="rv">
+      <span class="stag">🛡️ 걱정 해결</span>
+      <h2 class="stg">이런 걱정, 하셨나요?</h2>
+      <p class="ssb">많이 물어보시는 걱정들, 리얼로펌이 이렇게 해결합니다.</p>
+    </div>
+    <div class="worg rv">
+      <div class="worc"><div class="worw">기각되면 어떡하죠?</div><div class="worwd">돈만 날리고 기각될까봐 신청도 못 하고 있어요.</div><div class="wordiv"></div><div class="wors">선별 수임으로 안전하게</div><div class="worsd">가능한 사건만 선별해서 진행합니다. 조건 충족 시 기각 시 수수료 환불 구조로 리스크를 최소화합니다.</div></div>
+      <div class="worc"><div class="worw">주변에 알려지면 어떡해요?</div><div class="worwd">대구는 좁아서 소문이 날까봐 너무 걱정돼요.</div><div class="wordiv"></div><div class="wors">완벽한 비밀 보장</div><div class="worsd">법률 사무소는 비밀 유지 의무가 있습니다. 가족, 직장, 지인에게 알려지는 일 없이 진행됩니다.</div></div>
+      <div class="worc"><div class="worw">비용이 너무 비싸지 않나요?</div><div class="worwd">변호사 비용이 얼마나 드는지 모르겠어요.</div><div class="wordiv"></div><div class="wors">명확한 비용, 숨은 비용 없음</div><div class="worsd">상담 시 모든 비용을 투명하게 안내합니다. 분납 가능, 합리적인 구조로 설계해 드립니다.</div></div>
+    </div>
+    <div class="worg2 rv"><div class="wori">🛡️</div><div><div class="wort">리얼로펌 대구의 약속</div><div class="word">가능한 사건만 선별 수임하기 때문에 <strong>자신 있게 책임집니다.</strong><br>조건 충족 시 기각 → <strong>수수료 환불.</strong> 그만큼 자신 있습니다.</div></div></div>
+  </div>
+</section>
+
+<!-- 1분 자가진단 -->
+<section class="diag" id="diag">
+  <div class="si">
+    <div class="rv" style="text-align:center">
+      <span class="stag" style="border-color:rgba(42,157,124,.3)">⚡ 1분 진단</span>
+      <h2 class="stg" style="color:#fff;text-align:center">개인회생·파산,<br><span class="em">나에게 가능한지 1분 확인</span></h2>
+      <p class="ssb" style="color:rgba(255,255,255,.5);text-align:center">간단한 질문으로 가능 여부를 바로 확인하세요.</p>
+    </div>
+    <div class="dw rv">
+      <div class="dsd">
+        <div class="dsl">
+          <span class="dst">셀프진단</span>
+          <div class="dsti">빚 문제, 1분 진단으로<br><span class="em">해결방법 찾기</span></div>
+          <ul class="dss">
+            <li class="dssi active" id="s1"><span class="dssn">1</span>질문 1</li>
+            <li class="dssi" id="s2"><span class="dssn">2</span>질문 2</li>
+            <li class="dssi" id="s3"><span class="dssn">3</span>질문 3</li>
+          </ul>
+        </div>
+        <div class="dsr">
+          <div class="dstep active" data-q="1"><div class="dqh">질문 1/3</div><div class="dqt">현재 정기적인 소득이 있으신가요?</div><div class="dqs">직장, 사업, 프리랜서 등 월 단위로 발생하는 수입</div><div class="dos"><button class="do" onclick="dq(1,true)"><span>네, 정기적인 소득이 있습니다<br><small style="font-weight:400;color:rgba(255,255,255,.4)">급여, 사업소득 등</small></span><span>→</span></button><button class="do" onclick="dq(1,false)"><span>아니요, 소득이 없습니다<br><small style="font-weight:400;color:rgba(255,255,255,.4)">실직, 휴직 상태</small></span><span>→</span></button></div></div>
+          <div class="dstep" data-q="2"><div class="dqh">질문 2/3</div><div class="dqt">현재 총 부채가 얼마나 되시나요?</div><div class="dqs">금융권, 사채, 카드론, 지인 포함 전체</div><div class="dos"><button class="do" onclick="dq(2,true)"><span>5천만원 이상<br><small style="font-weight:400;color:rgba(255,255,255,.4)">개인회생·파산 검토 필요</small></span><span>→</span></button><button class="do" onclick="dq(2,false)"><span>5천만원 미만<br><small style="font-weight:400;color:rgba(255,255,255,.4)">다른 해결책도 검토 가능</small></span><span>→</span></button></div></div>
+          <div class="dstep" data-q="3"><div class="dqh">질문 3/3</div><div class="dqt">대구에 거주 또는 직장이 있으신가요?</div><div class="dqs">대구회생법원 관할 사건 확인</div><div class="dos"><button class="do" onclick="dq(3,true)"><span>네, 대구입니다<br><small style="font-weight:400;color:rgba(255,255,255,.4)">대구 전담팀 연결 가능</small></span><span>→</span></button><button class="do" onclick="dq(3,false)"><span>대구 외 지역입니다<br><small style="font-weight:400;color:rgba(255,255,255,.4)">본사 상담 연결 가능</small></span><span>→</span></button></div></div>
+          <div class="dres" id="dres"><div class="dri">🎯</div><div class="drt" id="dt"></div><div class="drd" id="dd"></div><div class="drb">📞 대구 사무소에서 무료 상담 후 정확하게 안내해 드립니다</div><a href="#fin" class="bg" style="width:100%;justify-content:center;margin-bottom:8px">대구 상담 바로 연결하기 →</a><button onclick="rD()" style="background:none;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.4);padding:7px 18px;border-radius:8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;font-size:12px;width:100%;margin-top:6px">다시 진단하기</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 사무소 위치 -->
+<section class="loc">
+  <div class="si">
+    <div class="rv"><span class="ltag">📍 사무소 위치</span><h2 class="ltt">대구 사무소에서<br>직접 만나보세요</h2><p class="lts">서류 없이 오셔도 됩니다. 편하게 오세요.</p></div>
+    <div class="ld rv">
+      <div class="ldh"><div style="display:flex;align-items:center;gap:12px"><span class="ldhb">📍 대구</span><span class="ldhn">대구 리얼 회생 파산 센터</span></div><a href="tel:053-000-0000" class="ldhp">📞 전화하기</a></div>
+      <div class="ldb">
+        <div class="ldph">🏛️</div>
+        <div class="ldi">
+          <ul class="ldil">
+            <li class="ldii"><div class="ldic">📍</div><div><div class="ldil2">주소</div><div class="ldiv">대구 수성구 달구벌대로 2307</div><div class="ldis">KB손해보험 대구빌딩 6층</div></div></li>
+            <li class="ldii"><div class="ldic">📞</div><div><div class="ldil2">대구 직통 전화</div><div class="ldiv">053-000-0000</div><div class="ldis">대구 사무소 직통, 서울 연결 없음</div></div></li>
+            <li class="ldii"><div class="ldic">🕐</div><div><div class="ldil2">상담 시간</div><div class="ldiv">평일 09:00 – 18:00</div><div class="ldis">토요일 예약 상담 가능</div></div></li>
+            <li class="ldii"><div class="ldic">💬</div><div><div class="ldil2">상담 방법</div><div class="ldiv">방문 · 전화 · 카카오톡</div><div class="ldis">편하신 방법으로 연락주세요</div></div></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ldbt"><a href="tel:053-000-0000" class="lbc">📞 전화하기</a><a href="https://map.naver.com" target="_blank" class="lbm">🗺️ 길찾기</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="fin" id="fin">
+  <div class="fint">지금이 가장 빠른 해결 방법입니다</div>
+  <h2 class="finth">대구에서 개인회생·파산,<br><span class="em">리얼로펌 대구와 함께라면</span><br>다시 시작할 수 있습니다</h2>
+  <p class="fins">늦을수록 상황은 악화됩니다.<br><strong>지금 바로 무료 상담으로 가능 여부부터 확인하세요.</strong></p>
+  <div class="finn">
+    <div class="fn"><span class="fnn">3,600건+</span><span class="fnl">누적 인가 건수</span></div>
+    <div class="fn"><span class="fnn">100%</span><span class="fnl">기각 시 환불 보장</span></div>
+    <div class="fn"><span class="fnn">1분</span><span class="fnl">무료 진단 소요</span></div>
+  </div>
+  <div class="finb">
+    <a href="tel:053-000-0000" class="bg" style="font-size:15px;padding:14px 30px">📞 053-000-0000 바로 전화</a>
+    <a href="#diag" class="bg" style="font-size:15px;padding:14px 30px;background:var(--dark)">⚡ 1분 진단 시작하기 →</a>
+  </div>
+  <div class="finnote">🔒 상담 내용은 외부에 절대 공개되지 않습니다</div>
+</section>
+
+<!-- 상담 섹션 -->
+<section class="cont">
+  <div class="si">
+    <div class="rv" style="text-align:center">
+      <span class="stag">무료 상담</span>
+      <h2 class="stg" style="text-align:center">지금 바로 시작하세요<br>더 이상 혼자 고민하지 마세요</h2>
+    </div>
+    <div class="cg">
+      <div class="ci rv">
+        <h3>대구에서 빚 문제,<br><em>리얼로펌</em>이 해결합니다</h3>
+        <p class="sub">상담 무료 · 비밀 100% 보장 · 가족·직장 통보 없음<br>변호사가 직접 상담합니다. 부담 없이 남겨보세요.</p>
+        <a href="tel:053-000-0000" class="cm"><span class="icon">📞</span><div class="detail"><h4>전화 상담</h4><p>평일 09:00 – 18:00 / 야간·주말 긴급 상담 가능</p></div><span class="num">053-000-0000</span></a>
+        <a href="#" class="cm"><span class="icon">💬</span><div class="detail"><h4>카카오톡 상담</h4><p>365일 24시간 실시간 상담 가능</p></div><span class="num" style="font-size:14px">채널 이동 →</span></a>
+        <div class="oi"><h4>📍 법무법인 리얼로펌 대구사무소</h4><p>대구광역시 수성구 달구벌대로 2307 (KB손해보험 대구빌딩 6층)<br>대구지방법원 인근 · 무료 주차 가능<br>☎ 053-000-0000</p></div>
+      </div>
+      <div class="cf2 rv">
+        <h3>📝 무료 상담 신청</h3>
+        <div class="cff"><label>이름</label><input type="text" placeholder="이름을 작성해주세요"></div>
+        <div class="cff"><label>연락처</label><input type="tel" placeholder="010-0000-0000"></div>
+        <div class="cff"><label>채무 금액 (대략)</label><select><option value="">선택해주세요</option><option>5천만원 이하</option><option>5천만원 ~ 1억원</option><option>1억원 ~ 3억원</option><option>3억원 이상</option></select></div>
+        <div class="cff"><label>문의 내용</label><textarea placeholder="자세한 내용을 입력해주세요. (상담 내용은 외부에 절대 공개되지 않습니다)"></textarea></div>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:0;margin-bottom:4px"><input type="checkbox" id="ag2"><label for="ag2" style="font-size:12px;color:#888">개인정보처리방침에 동의합니다</label></div>
+        <button class="csub" onclick="this.textContent='✓ 접수 완료. 곧 연락드리겠습니다.';this.style.background='#1e7a5e';this.disabled=true">무료 상담 신청하기 →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ftin">
+    <div class="ftl">법무법인 <span>리얼로펌</span> 대구사무소</div>
+    <div class="ftd">회생과 파산, 새로운 시작을 위한 믿을 수 있는 법률 파트너<br>대표 지정: 이창희 | 사업자등록번호: 801-81-03393</div>
+    <div class="ftc">© 2026 리얼로펌. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+let cur=0;
+const sl=document.querySelectorAll(".hs"),dt=document.querySelectorAll(".dot");
+function gS(n){sl[cur].classList.remove("active");dt[cur].classList.remove("active");cur=n;sl[cur].classList.add("active");dt[cur].classList.add("active")}
+setInterval(()=>gS((cur+1)%sl.length),4000);
+const ob=new IntersectionObserver(e=>{e.forEach((x,i)=>{if(x.isIntersecting)setTimeout(()=>x.target.classList.add("vis"),i*80)});},{threshold:.1});
+document.querySelectorAll(".rv").forEach(el=>ob.observe(el));
+let ans=[];
+function dq(q,a){
+  ans.push(a);
+  document.querySelector("[data-q='"+q+"']").classList.remove("active");
+  document.getElementById("s"+q).classList.remove("active");
+  if(q<3){document.querySelector("[data-q='"+(q+1)+"']").classList.add("active");document.getElementById("s"+(q+1)).classList.add("active");}
+  else{
+    const inc=ans[0],big=ans[1];
+    let t,d;
+    if(inc&&big){t="🎯 개인회생 가능성이 높습니다";d="수입이 있고 부채가 큰 경우 개인회생이 적합합니다. 빠르게 진행할수록 유리합니다.";}
+    else if(!inc&&big){t="📋 개인파산·면책을 검토하세요";d="수입이 없는 경우 파산·면책 신청이 더 적합할 수 있습니다.";}
+    else{t="💬 정확한 상담이 필요합니다";d="개인 상황에 맞는 정확한 방향을 위해 무료 상담을 받아보세요.";}
+    document.getElementById("dt").textContent=t;
+    document.getElementById("dd").textContent=d;
+    document.getElementById("dres").classList.add("show");
+  }
+}
+function rD(){
+  ans=[];
+  document.getElementById("dres").classList.remove("show");
+  document.querySelectorAll(".dstep").forEach(s=>s.classList.remove("active"));
+  document.querySelector("[data-q='1']").classList.add("active");
+  ["s1","s2","s3"].forEach((id,i)=>document.getElementById(id).classList.toggle("active",i===0));
+}
+document.querySelectorAll("a[href^='#']").forEach(a=>{a.addEventListener("click",e=>{const t=document.querySelector(a.getAttribute("href"));if(t){e.preventDefault();t.scrollIntoView({behavior:"smooth"})}})});
+</script>
+</body>
+</html>
